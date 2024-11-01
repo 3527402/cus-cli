@@ -1,14 +1,15 @@
 #! /usr/bin/env node
-const commander = require('commander')
-const chalk = require('chalk')
-const program = new commander.Command()
+import chalk from 'chalk'
+import create from '../lib/create.js'
+import { program } from 'commander'
+
 // 创建命令
 program
   .command('create <project>')
   .description('create a new project')
   .option('-f, --force', 'Overwrite target directory if it exists')
-  .action((project) => {
-    console.log('create ' + project)
+  .action((name, options) => {
+    create(name, options)
   })
 
 // 监听到help命令：my-cli --help时会调用回调函数
