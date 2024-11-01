@@ -16,7 +16,7 @@
   "author": "csy",
   "type": "module",
   "engines": {
-    "node": ">=13.2.0"
+    "node": ">=16.2.0"
   },
   "license": "ISC",
   "bugs": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/3527402/cus-cli#readme",
   "dependencies": {
+    "axios": "^1.7.7",
     "chalk": "^4.1.2",
     "child_process": "^1.0.2",
     "commander": "^12.1.0",
@@ -33,6 +34,7 @@
     "ejs": "^3.1.10",
     "fs-extra": "^11.2.0",
     "inquirer": "^11.1.0",
-    "log-symbols": "^7.0.0"
+    "log-symbols": "^7.0.0",
+    "ora": "^8.1.0"
   }
 }

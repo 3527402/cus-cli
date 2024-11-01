@@ -11,8 +11,14 @@ program
   .action((name, options) => {
     create(name, options)
   })
-
-// 监听到help命令：my-cli --help时会调用回调函数
+// 下载项目
+program
+  .command('download')
+  .description('download a project')
+  .option('-f, --force', 'Overwrite target directory if it exists')
+  .action((name, options) => {
+    console.log('download')
+  })
 program.on('--help', () => {
   // 空打印相当于换行
   console.log()
